@@ -1,0 +1,38 @@
+.checkoutProduct{
+    display: flex;
+    align-items: flex-start;
+    
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+    padding: 15px;
+}
+.checkoutProduct__image{
+    width: 180px;
+    object-fit: contain;
+    height: 180px;
+}
+.checkoutProduct__info{
+   
+    margin-top: 15px;
+    padding-left: 15px;
+}
+.checkoutProduct__rating{
+    color: gold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.checkoutProduct__info button{
+    background-color: #f0c14b;
+    
+    
+    
+    border-radius: 2px;
+}
+.checkoutProduct__title{
+    font-size: 17px;
+    font-weight: 800;
+}
+.checkoutProduct__price{
+    font-size: 13px;
+}
