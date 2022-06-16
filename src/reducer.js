@@ -15,7 +15,7 @@ const reducer=(state,action)=>{
             const index=state.basket.findIndex((item)=>item.id===action.id);
             let newBasket=[...state.basket];
             newBasket.splice(index,1);
-            console.log(index);
+            
 
             return{
                 ...state,
@@ -25,6 +25,11 @@ const reducer=(state,action)=>{
             return{
                 ...state,
                 user:action.user
+            }
+        case 'EMPTY_BASKET':
+            return{
+                ...state,
+                basket:[]
             }
         default:
             return state;

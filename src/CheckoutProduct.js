@@ -2,7 +2,7 @@ import React from 'react'
 import './CheckoutProduct.css'
 import StarIcon from '@mui/icons-material/Star'
 import { useStateValue } from './StateProvider';
-function CheckoutProduct({id,title,price,image,rating}) {
+function CheckoutProduct({id,title,price,image,rating,hideButton}) {
   const [state,dispatch]=useStateValue();
   const removeItem=()=>{
     dispatch({
@@ -23,7 +23,8 @@ function CheckoutProduct({id,title,price,image,rating}) {
                 {Array(rating).fill().map(()=><StarIcon/>)}
                 
             </div>
-            <button onClick={removeItem}>Remove from Basket</button>
+            {!hideButton &&(<button onClick={removeItem}>Remove from Basket</button>)}
+            
         </div>
     </div>
   )
