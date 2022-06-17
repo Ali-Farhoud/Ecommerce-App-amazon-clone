@@ -5,8 +5,11 @@ import {useStateValue} from './StateProvider'
 import {useNavigate} from "react-router-dom"
 
 function Subtotal() {
+  // use to navigate to another route 
   const navigate=useNavigate();
+  // context api to access global data
   const [state,dispatch]=useStateValue();
+  // get total price of items in basket
   const totalPrice=()=>{
     let total=0;
     state.basket.forEach(element => {
@@ -18,6 +21,7 @@ function Subtotal() {
   
   
     <div className='subtotal'>
+      {/**currency format to formart monetary values */}
         <CurrencyFormat
         renderText={(value)=>(
             <>

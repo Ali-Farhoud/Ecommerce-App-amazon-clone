@@ -4,8 +4,10 @@ import StarIcon from '@mui/icons-material/Star';
 import { useStateValue } from './StateProvider';
 
 function Product({id,title,price,image,rating}) {
-  const [state,dispatch]=useStateValue();
   
+  //context API to manage global data storage (basket of items)
+  const [state,dispatch]=useStateValue();
+  //call dispatch from context api to trigger add to basket action (onclick of add to cart)
   const addToBasket=()=>{
     dispatch({
       type:"ADD_TO_BASKET",
@@ -26,7 +28,9 @@ function Product({id,title,price,image,rating}) {
             <p>{title}</p>
             <p className="product__price"><small>$</small><strong>{price}</strong></p>
             <div className="product__rating">
-                {Array(rating).fill().map(()=><StarIcon/>)}
+                {Array(rating).fill().map((_,index)=><StarIcon key={index}
+
+                />)}
                 
             </div>
             

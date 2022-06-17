@@ -4,6 +4,7 @@ import { auth } from './firebase';
 import './Login.css'
 
 function Login() {
+    // use state hooks for email and
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
     const navigate=useNavigate();

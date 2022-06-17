@@ -4,6 +4,8 @@ import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './StateProvider'
 import Subtotal from './Subtotal'
 function Checkout() {
+  
+  //context api to access basket data
   const [state,dispatch]=useStateValue();
   return (
     <div className='checkout'>
@@ -11,9 +13,10 @@ function Checkout() {
             <img src="https://m.media-amazon.com/images/G/01/AmazonGo/Engagment/2021/NewLP2021/LPRound3August/Header_TakeIt_1500x300.jpg" alt="" className="checkout__ad" />
             <div>
                 <h2 className="checkout__title">Your Shopping Basket</h2>
-                {state.basket.map((item)=>(
+                {/*for every item in basket, render a checkoutProcuct component*/ 
+                state.basket.map((item,index)=>(
              
-                <CheckoutProduct id={item.id} title={item.title} image={item.image} rating={item.rating} price={item.price}/>
+                <CheckoutProduct key={index} id={item.id} title={item.title} image={item.image} rating={item.rating} price={item.price}/>
                 ))}
                 
             </div>

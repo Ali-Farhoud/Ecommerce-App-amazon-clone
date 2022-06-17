@@ -9,6 +9,7 @@ import axios from './axios';
 import { db } from './firebase';
 
 function Payment() {
+    
     const navigate=useNavigate();
     const [state,dispatch]=useStateValue();
     const [error,setError]=useState(null);
@@ -51,6 +52,11 @@ function Payment() {
                 type:"EMPTY_BASKET",
             })
             navigate('/orders', { replace: true });
+        }).catch((err)=>{
+            console.log(err.message);
+            setProcessing(false);
+            
+
         })
 
     }
@@ -85,8 +91,9 @@ function Payment() {
                     <h3>Review Items and Delivery</h3>
                 </div>
                 <div className="payment__items">
-                    {state.basket.map(element => (
+                    {state.basket.map((element,index) => (
                         <CheckoutProduct 
+                        key={index}
                         id={element.id}
                         title={element.title}
                         image={element.image}

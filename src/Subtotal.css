@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 270px;
+    
     min-height: 100px;
     padding: 20px;
     background-color: #f3f3f3;
@@ -24,4 +25,11 @@
     min-height: 30px;
     border-radius: 2px;
     margin-top: 10px;
+}
+@media (max-width:450px) {
+    .subtotal{
+        max-width: 100%;
+        min-height: 120px;
+        margin-top: 25px;
+    }
 }

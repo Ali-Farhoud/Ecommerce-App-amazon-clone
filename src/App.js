@@ -12,10 +12,19 @@ import {loadStripe} from "@stripe/stripe-js";
 import {Elements} from "@stripe/react-stripe-js";
 import Orders from './Orders';
 
-
+// STRIPE API PUBLIC KEY USAGE
 const promise=loadStripe("pk_test_51LB2SqEVtvOnAfC7doXTmFarOiIpzc5iugD0aN5HqCJjdGh9vxBZRQdxlSMMLuJ5c8K0ZtkdRVXbcuM5YgYp5aZn00JUJwrUTn");
+
+//Main App Componenet
 function App() {
+  // Context API hook
   const [state,dispatch]=useStateValue();
+  /* 
+  useEffect hook to perform function at render
+  on the change of the user status (logged in/signed out)
+  dispatch to chenge the state of the user in global data(context API)
+
+  */
   useEffect(()=>{
     auth.onAuthStateChanged(authUser=>{
       
@@ -33,7 +42,7 @@ function App() {
     })
   },[]);
   return (
-    
+    // use BrowserRouter to help navigate between different pages in the App
     <Router>
       <div className="app">
       

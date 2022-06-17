@@ -16,11 +16,33 @@
     display: flex;
     z-index: 1;
     margin: 0 15px;
+    justify-content: center;
 }
+.home__dataDiv{
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.home__data{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 15px;
+    
+}
+
 @media (max-width:550px) {
     .home__row{
         flex-direction: column;
         align-items: center;
     }
-    
+    .home__data{
+        flex-direction: column;
+        
+    }
+    .home__dataDiv{
+        width: 100%;
+    }
 }

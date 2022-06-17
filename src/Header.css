@@ -66,5 +66,8 @@
     .header__option{
         display: none;
     }
+    .header__signIn{
+        display:flex;
+    }
     
 }

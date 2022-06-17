@@ -7,7 +7,10 @@ import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
 
 function Header() {
+    // context api hook for global data storage
     const [state,dispatch]=useStateValue();
+    // signout user if user exists (signedIn) on click of sign in div
+    // auth is firebase object related to the authentication
     const handleAuthentication=()=>{
         if(state.user){
             auth.signOut();
@@ -25,8 +28,9 @@ function Header() {
             <SearchIcon className='header__searchIcon'/> 
         </div>
         <div className="header__nav">
+            {/*link to login page if no user is signed in*/ }
             <Link to={!state.user &&'/login'}>
-                <div onClick={handleAuthentication} className="header__option">
+                <div onClick={handleAuthentication} className="header__option header__signIn">
                     <span className='header__optionLineOne'> {state.user? state.user.email:' Hello Guest'}</span>
                     <span className='header__optionLineTwo'>{ state.user? 'Sign Out':'Sign In'}</span>
                 </div>

@@ -4,18 +4,21 @@
     
     margin-top: 15px;
     margin-bottom: 15px;
-    
+    max-width: 100%;
     padding: 15px;
+    justify-content: center;
 }
 .checkoutProduct__image{
-    width: 180px;
+    max-width: 180px;
     object-fit: contain;
-    height: 180px;
+    max-height: 180px;
+    flex-basis: 100%;
 }
 .checkoutProduct__info{
-   
+   flex-basis: 100%;
     margin-top: 15px;
     padding-left: 15px;
+    
 }
 .checkoutProduct__rating{
     color: gold;
@@ -35,4 +38,15 @@
 }
 .checkoutProduct__price{
     font-size: 13px;
+}
+
+@media (max-width:450px) {
+    .checkoutProduct{
+        padding: 0;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .checkoutProduct__title{
+        font-size: 14px;
+    }
 }
