@@ -1,3 +1,13 @@
+# Amazon Clone Full Stack Project
+in this project, I built an Amazon e-commerce website clone. I used the javascript React framework
+for the front-end build. Multiple API's and Libraries were used and i will discuss them below.
+
+## React DOM Router
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
