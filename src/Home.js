@@ -5,7 +5,7 @@ import axios from "axios";
 // renders products to home page route
 // try to use api to fetch random products
 function Home() {
-  let num=0;
+  
   const[fdata,setFdata]=useState([]);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ function Home() {
   },[]);
   
 
-  
+  /**use axios to fetch product data from api */
   const options = {
     method: 'GET',
     url: 'https://asos2.p.rapidapi.com/products/v2/list',
@@ -42,11 +42,6 @@ function Home() {
   });
   }
 	
-
-
-
-  
-
   return (
     <div className='home'>
         <div className="home__container">

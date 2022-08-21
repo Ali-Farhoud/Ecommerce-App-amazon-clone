@@ -45,4 +45,7 @@
     .home__dataDiv{
         width: 100%;
     }
+    .home__image{
+        margin-bottom: -50px;
+    }
 }
